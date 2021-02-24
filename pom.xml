@@ -97,14 +97,6 @@
                     </execution>
                 </executions>
             </plugin>
-             <repositories>
-   
-                <repository>
-                    <id>forplay-legacy</id>
-                     <url>http://forplay.googlecode.com/svn/mavenrepo</url>
-                      </repository>
-               </repositories>
-
             <plugin>
                 <artifactId>maven-release-plugin</artifactId>
                 <version>2.5</version>
