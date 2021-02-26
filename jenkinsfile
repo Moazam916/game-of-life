@@ -6,7 +6,7 @@ stage('Preparation'){
 stage('Build')
 {
 withMaven(jdk: 'JDK for Maven', maven: '3.6.3') {
-    bat label: '', script: 'mvn clean install -U'
+    bat label: '', script: 'mvn clean install'
 }
 }
 stage('results'){
