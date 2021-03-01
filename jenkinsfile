@@ -1,16 +1,14 @@
+
 node('master'){
 
 stage('Preparation'){
-  git branch: 'main', credentialsId: 'Github', url: 'https://github.com/Moazam916/game-of-life.git'
- }
+     git branch: 'main', credentialsId: 'Github', url: 'https://github.com/Moazam916/game-of-life.git'
+     }
 stage('Build')
 {
-withMaven(jdk: 'JDK for Maven', maven: '3.6.3') {
-    bat label: '', script: 'mvn clean install'
-}
-}
-stage('results'){
-junit '**/target/surefire-reports/*.xml'
-archive 'target/*.jar'
+script {
+                            bat "mvn clean install"
+                               
+                        }
 }
 }
