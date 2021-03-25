@@ -7,7 +7,7 @@ stage('Preparation'){
 stage('Build')
 {
 script {
-                            sh "mvn clean install"
+                            echo "mvn clean install"
                                
                         }
 }
